@@ -1,0 +1,71 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<style type="text/css">
+textarea {
+  background-color: #555;
+  border: 0 none;
+  color: #fff;
+  direction: ltr;
+  display: block;
+  float: right;
+  font: 14px arial;
+  height: 200px;
+  padding: 5px;
+  text-align: left;
+  width: 100%;
+}
+input {
+  border: 0 none;
+  color: #fff;
+  display: block;
+  float: right;
+  font: bold 14px/20px tahoma;
+  height: 30px;
+  padding: 0 0 10px;
+  text-align: center;
+  width: 50%;
+}
+.tahwelcnmu {background-color: #4fba6e;}
+.hazfcnmu {background-color: #fc5400;}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+function html2entities(){
+var re=/[<>"'&]/g
+for (i=0; i<arguments.length; i++)
+arguments[i].value=arguments[i].value.replace(re, function(m){return replacechar(m)})
+}
+function replacechar(match){
+if (match=="<")
+return "&lt;"
+else if (match==">")
+return "&gt;"
+else if (match=="\"")
+return "&quot;"
+else if (match=="'")
+return "&#039;"
+else if (match=="&")
+return "&amp;"
+}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+//Character count script
+function countit(what){
+formcontent=what.form.charcount.value
+what.form.displaycount.value=formcontent.length
+}
+//]]>
+</script>
+</head>
+<body>
+<form>
+<textarea name="data1" placeholder="... أضف الكود المراد تحويله هنا"></textarea><br>
+<input class="tahwelcnmu" name="button"  onclick="html2entities(this.form.data1)" value="تحويل" type="button"> 
+<input class="hazfcnmu"name="Clear" value="  مسح  " type="reset">
+
+</form>
+
+</body></html>
